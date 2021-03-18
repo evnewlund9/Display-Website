@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>My University Contacts</title>
+
+</head>
+
+<body>
+
+  <nav class="navBar">
+    <table id="nav">
+      <tr>
+        <td><a href="MyContacts.html">My Contacts</a></td>
+        <td><a href="MyWidgets.html">My Widgets</a></td>
+        <td><a href="MyForm.html">My Form</a></td>
+        <td><a href="MyServer.html">My Server</a></td>
+      </tr>
+    </table>
+  </nav>
+
+  <h1>My Contacts</h1>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="tab">
+        <table id="contacts">
+
+          <caption>
+            <br>
+          </caption>
+
+          <tr id="table-header">
+            <th>Name</th>
+
+            <th>Category</th>
+
+            <th>Location</th>
+
+            <th>Contact Information</th>
+
+            <th>Email</th>
+
+            <th>Website</th>
+
+          </tr>
+
+          <tbody>
+            <tr onmouseover="chgThumb('thumb1', '50')" onmouseout="chgThumb('thumb1', '0')">
+              <td>Professor Stephen Guy</td>
+              <td>Computer Science Faculty </td>
+              <td>5-225F Keller Hall 200 Union Street SE Minneapolis, MN, 55455</td>
+              <td>Summer 20 CSCI 5611 Professor
+                <div>
+                  <img id="thumb1" src="img/row1.png" alt="Steven Guy" class="thumbnail" height="0">
+                </div>
+              </td>
+              <td><a href="mailto:sjguy@umn.edu">sjguy@umn.edu</a></td>
+              <td><a href="https://cse.umn.edu/cs/stephen-guy">Department of Computer Science Bio Page</a>
+              </td>
+            </tr>
+
+            <tr onmouseover="chgThumb('thumb2', '50')" onmouseout="chgThumb('thumb2', '0')">
+              <td>Professor Chris Dovolis</td>
+              <td>Computer Science Faculty </td>
+              <td>6-195 Keller Hall 200 Union Street SE Minneapolis, MN, 55455</td>
+              <td>Spring 19 CSCI 1933 Professor
+                <div>
+                  <img id="thumb2" src="img/row2.jpg" alt="Chris Dovolis" class="thumbnail" height="0">
+                </div>
+              </td>
+              <td><a href="mailto:dovol002@umn.edu">dovol002@umn.edu</a></td>
+              <td><a href="https://cse.umn.edu/cs/chris-dovolis">Department of Computer Science Bio Page</a>
+              </td>
+            </tr>
+
+            <tr onmouseover="chgThumb('thumb3', '50')" onmouseout="chgThumb('thumb3', '0')">
+              <td>Professor Maury Bramson</td>
+              <td>Mathematics Faculty </td>
+              <td>237 Vincent Hall 206 Church Street SE Minneapolis, MN, 55455</td>
+              <td>Fall 18 MATH 1272 Professor
+                <div>
+                  <img id="thumb3" src="img/row3.jpg" alt="Maury Bramson" class="thumbnail" height="0">
+                </div>
+              </td>
+              <td><a href="mailto:bramson@umn.edu">bramson@umn.edu</a></td>
+              <td><a href="http://www-users.math.umn.edu/~bramson/">Personal Homepage</a></td>
+            </tr>
+
+            <tr onmouseover="chgThumb('thumb4', '50')" onmouseout="chgThumb('thumb4', '0')">
+              <td>Francesca Socki</td>
+              <td>Earth Sciences Staff</td>
+              <td>401-03 Tate Hall 116 Church Street SE Minneapolis, MN, 55455</td>
+              <td>Spring 20 ESCI 1003 TA
+                <div>
+                  <img id="thumb4" src="img/row4.png" alt="Francesca Socki" class="thumbnail" height="0">
+                </div>
+              </td>
+              <td><a href="mailto:socki002@umn.edu">socki002@umn.edu</a></td>
+              <td><a href="https://www.esci.umn.edu/people/Socki-Francesca/">Department of Earth &
+                  Enviornmental
+                  Sciences
+                  Bio Page</a></td>
+            </tr>
+
+            <tr onmouseover="chgThumb('thumb5', '50')" onmouseout="chgThumb('thumb5', '0')">
+              <td>Paul J. Strykowski</td>
+              <td>General Faculty</td>
+              <td>115 Lind Hall 207 Church Street SE Minneapolis, MN, 55455</td>
+              <td>Associate Dean for Undergraduate Programs
+                <div>
+                  <img id="thumb5" src="img/row5.jpg" alt="Undergraduate Dean" class="thumbnail" height="0">
+                </div>
+              </td>
+
+              <td><a href="mailto:pstry@umn.edu">pstry@umn.edu</a></td>
+              <td><a href="https://cse.umn.edu/college/office-associate-dean-undergraduate-programs">Office of
+                  the
+                  Dean
+                  Bio Page</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="BigImage">
+        <img id="image" src="img/gophers-mascot.png" alt="Goldy Gopher" class="rotating-image" />
+        <br>
+        <button id="button1" onclick="chgimg()">Feeling Lucky</button>
+        <button id="button2" onclick="rotateImg()">Feeling Dizzy</button>
+      </div>
+    </div>
+
+    <!-- Please note that the "Go" button requires a double click to launch the directions functionality -->
+    <div class="map-container">
+      <div class="directions" id="panel"></div>
+      <div id="map"></div>
+      <div class="icons">
+        <img id="mapImage" src="img/mapIcon.jpg" alt="Map Icon">
+        <img id="routeImage" src="img/routeIcon.png" alt="Map Icon">
+      </div>
+
+      <div id="pac-card" class="pac-card">
+        <div class=map-header id="title">Location Search</div>
+        <div class="pac-controls">
+          <form>
+            <select name="places" id="dropdown" class="controls" onchange="allowTextInput()">
+              <option value="restaurant">Restaurant</option>
+              <option value="hospital">Hospital</option>
+              <option value="parking">Parking</option>
+              <option value="supermarket">Supermarket</option>
+              <option value="other">Other</option>
+            </select>
+            <input id="pac-input" type="text" placeholder="Enter Other Places" disabled />
+            <label for="radius">Radius: </label>
+            <input id="radius" type="text" placeholder="Enter a search radius" required />
+            <button type="button" id="search">Search</button>
+          </form>
+        </div>
+
+        <div class=map-header id="title2">Directions to</div>
+        <form>
+          <input id="directions-input" type="text" placeholder="Enter a location" required />
+          <input type="radio" name="direction-type" id="walk" value="Walk" checked>
+          <label for="walk">Walk</label><br>
+          <input type="radio" name="direction-type" id="car" value="Car">
+          <label for="car">Drive</label><br>
+          <input type="radio" name="direction-type" id="train" value="Train">
+          <label for="train">Train</label><br>
+          <button type="button" id="go">Go</button>
+        </form>
+      </div>
+
+      <div class="attributeAuthor">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+  </div>
+  <script src="js/googleMap.js"> </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbrLSyCMTfPG_a8Qjw0zrzzg4fvYEEka0&callback=initMap&libraries=places&v=weekly" async></script>
+  <script type="text/javascript" src="js/chgimg.js"></script>
+  <script type="text/javascript" src="js/chgthumb.js"> </script>
+  <script type="text/javascript" src="js/rotateImg.js"> </script>
+
+</body>
+
+</html>

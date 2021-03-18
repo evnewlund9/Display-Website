@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Simple Form</title>
+
+</head>
+
+<body>
+
+	<nav class="navBar">
+		<table id="nav">
+			<tr>
+				<td><a href="MyContacts.html">My Contacts</a></td>
+				<td><a href="MyWidgets.html">My Widgets</a></td>
+				<td><a href="MyForm.html">My Form</a></td>
+				<td><a href="MyServer.html">My Server</a></td>
+			</tr>
+		</table>
+	</nav>
+
+	<h1>My Form</h1>
+
+	<div class="grid-container">
+		<div class="grid-item1">
+			<form action="http://localhost:9001" method="post">
+				<p>
+					<label>Name:
+						<input name="name" id="name" type="text" size="25" maxlength="30" required pattern="[a-zA-Z0-9\s]+">
+					</label><br>
+				</p>
+
+				<p>
+					<label>Category:
+						<select name="category" id="category">
+							<option value="personal">Personal</option>
+							<option value="academic">Academic</option>
+							<option value="industry">Industry</option>
+						</select>
+					</label><br>
+				</p>
+
+				<p>
+					<label>Location:
+						<input name="location" id="location" type="text" size="25" maxlength="30" required>
+					</label><br>
+				</p>
+
+				<p>
+					<label>Contact Information:
+						<input name="contact" id="contact" type="text" size="25" maxlength="30" required>
+					</label><br>
+				</p>
+
+				<p>
+					<label>Email:
+						<input name="email" id="email" type="email" placeholder="JohnDoe@example.com" required>
+					</label><br>
+				</p>
+
+				<p>
+					<label>Website:
+						<input name="website" id="website" type="url" size="25" maxlength="30" placeholder="http://google.com" required>
+					</label><br>
+				</p>
+
+				<p>
+					<input name="submit" type="submit" value="Submit">
+					<input type="reset" value="Clear">
+				</p>
+			</form>
+		</div>
+
+		<div class="grid-item2">
+			<input id="pac-input" type="text" />
+			<div id="map"></div>
+		</div>
+	</div>
+
+	<script src=js/googleMap.js> </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbrLSyCMTfPG_a8Qjw0zrzzg4fvYEEka0&callback=init&libraries=places&v=weekly" async></script>
+
+</body>
+
+</html>
